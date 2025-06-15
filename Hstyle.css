@@ -51,6 +51,7 @@ main{
             text-decoration: none;
             display: inline-block;
         }
+        /* ทำreadmore */
         .readmore{
             display: none;
             

@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: grey;
+    color: aliceblue;
+    padding: 100px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: rgb(63, 63, 63);
+    padding: 20px;
+    text-align: center;
+    a{
+        color: aliceblue;
+        text-decoration: none;
+        padding:  0px 20px;
+    }
+}
+
+main{
+    padding: 50px;
+    height: 960px;
+    
+    .about-container{
+        background-color: #ccc;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 30px;
+        .about-title{
+            text-decoration: underline;
+        }
+        .about-info{
+            margin: 20px 0;
+        }
+        .about-btn{
+            background-color: black;
+            color: aliceblue;
+            padding: 10px;
+            border: 2px solid #000;
+        border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+        
+        }
+        /* ทำreadmore */
+        .readmore{
+            display: none;
+            
+        }
+        .moretext{
+            max-height: 0;
+            overflow: hidden;
+            /* display: none; */
+            /* margin-top: 10px; */
+            transition: max-height 2s ease;
+            
+        }
+        .readmore:checked ~ .moretext{
+            /* display: block; */
+            max-height: 70px;
+            
+        }
+        .readmore-label{
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 5px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 1s;
+            
+        }
+        .readmore-label:hover{
+            background-color: #ff000098;
+        }
+        
+
+        
+    }
+    /* ประวัติทำในกล่อง main ได้แต่ อยู่ที่ acc ที่ทำอยู่ในกล่องไหน ก็เอาโค้ดใส่กล่องนั้น */
+    .tobtang{
+        background-color: #79b4f3;
+        padding: 10px;
+        margin-top: 20px;
+        border: 2px solid black;
+        border-radius: 30px;
+    }
+    .tobtang1{
+        background-color: #79b4f3;
+        padding: 10px;
+        margin: 15px auto ;
+        
+        border: 2px solid black;
+        border-radius: 30px;
+        font-size: 25px;
+        width: 250px;
+        
+    }
+    .accordion-container{
+            width: 600px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .accordion{
+            background-color: #fff;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            border-top: 2px solid black;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        input[type="checkbox"]{
+            display: none;           
+        }
+        .accordion label{
+            display: block;
+            padding: 15px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            background-color: #f7f7f7;
+            border-bottom: 1px solid #ddd;
+            transition: all 1s ease;
+        }
+        .accordion label:hover{
+            background: #e6e6e6;
+        }
+        .accordion label::after{
+            content: "▼";
+            position: absolute;
+            right: 20px;
+            font-size: 18px;
+            transition: transform 1s; 
+        }
+
+        input[type="checkbox"]:checked + label::after{
+            transform: rotate(180deg);
+        }
+
+        .content{
+            max-height: 0;
+            /* transform: scaleY(0); */
+            /* transform-origin: top; */
+            overflow: hidden;
+            padding: 0 20px;
+            background-color: #fff;
+            transition: max-height 1.6s ease,padding 1.5s;
+        }
+
+        input[type="checkbox"]:checked+label+.content{
+            max-height: 40px;
+            padding: 15px 20px;
+            /* transform: scaleY(1); */
+        }
+}
+        
+        

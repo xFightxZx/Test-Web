@@ -88,7 +88,80 @@ main{
         
     }
     /* ประวัติทำในกล่อง main ได้แต่ อยู่ที่ acc ที่ทำอยู่ในกล่องไหน ก็เอาโค้ดใส่กล่องนั้น */
-    
+    .tobtang{
+        background-color: #79b4f3;
+        padding: 10px;
+        margin-top: 20px;
+        border: 2px solid black;
+        border-radius: 30px;
+    }
+    .tobtang1{
+        background-color: #79b4f3;
+        padding: 10px;
+        margin: 15px auto ;
+        
+        border: 2px solid black;
+        border-radius: 30px;
+        font-size: 25px;
+        width: 250px;
+        
+    }
+    .accordion-container{
+            width: 600px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .accordion{
+            background-color: #fff;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            border-top: 2px solid black;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        input[type="checkbox"]{
+            display: none;           
+        }
+        .accordion label{
+            display: block;
+            padding: 15px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            background-color: #f7f7f7;
+            border-bottom: 1px solid #ddd;
+            transition: all 1s ease;
+        }
+        .accordion label:hover{
+            background: #e6e6e6;
+        }
+        .accordion label::after{
+            content: "▼";
+            position: absolute;
+            right: 20px;
+            font-size: 18px;
+            transition: transform 1s; 
+        }
+
+        input[type="checkbox"]:checked + label::after{
+            transform: rotate(180deg);
+        }
+
+        .content{
+            max-height: 0;
+            /* transform: scaleY(0); */
+            /* transform-origin: top; */
+            overflow: hidden;
+            padding: 0 20px;
+            background-color: #fff;
+            transition: max-height 1.6s ease,padding 1.5s;
+        }
+
+        input[type="checkbox"]:checked+label+.content{
+            max-height: 40px;
+            padding: 15px 20px;
+            /* transform: scaleY(1); */
+        }
 }
         
         

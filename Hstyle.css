@@ -40,6 +40,7 @@ main{
         }
         .main-info{
             margin: 20px 0;
+
         }
         .main-btn{
             background-color: black;
@@ -49,6 +50,37 @@ main{
         border-radius: 30px;
             text-decoration: none;
             display: inline-block;
+        }
+        .readmore{
+            display: none;
+            
+        }
+        .moretext{
+            max-height: 0;
+            overflow: hidden;
+            /* display: none; */
+            /* margin-top: 10px; */
+            transition: max-height 2s ease;
+            
+        }
+        .readmore:checked ~ .moretext{
+            /* display: block; */
+            max-height: 70px;
+            
+        }
+        .readmore-label{
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 5px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 1s;
+            
+        }
+        .readmore-label:hover{
+            background-color: #ff000098;
         }
     }
 }
